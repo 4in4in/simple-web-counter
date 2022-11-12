@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  counter:
+    container_name: coutner
+    build: ${PWD}/
+    environment:
+      - COUNTER_PORT=9001
+    volumes:
+      - ${PWD}/volumes/counter/data:/app/data
+    ports:
+      - 9000:9001
